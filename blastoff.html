@@ -1,1 +1,36 @@
 <!-- Jadyn Rutz -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> UAT Mission Control Blast Off </title>
+    </head>
+    <body>
+        <img src="https://synchronic.uat.edu/courses/5439/files/767933/preview"/>
+        <button onclick="timer()"> Launch! </button>
+        <p id="timer-output"></p>
+        <script>
+            var outputElem = document.getElementById("timer-output");
+
+            function timer(){
+                var currTime = 50;
+
+                displayTime(currTime);
+                setTimeout(function(){currTime -= 5; displayTime(currTime);}, 5000);
+                setTimeout(function(){currTime -= 5; displayTime(currTime);}, 10000);
+                setTimeout(function(){currTime -= 5; displayTime(currTime);}, 15000);
+                setTimeout(function(){currTime -= 5; displayTime(currTime);}, 20000);
+                setTimeout(function(){currTime -= 5; displayTime(currTime);}, 25000);
+                setTimeout(function(){currTime -= 5; displayTime(currTime);}, 30000);
+                setTimeout(function(){currTime -= 5; displayTime(currTime);}, 35000);
+                setTimeout(function(){currTime -= 5; displayTime(currTime);}, 40000);
+                setTimeout(function(){currTime -= 5; displayTime(currTime);}, 45000);
+                setTimeout(function(){currTime -= 5; displayTime(currTime);}, 50000);
+            }
+            
+            function displayTime(currTime){
+                console.log(currTime)
+                if (currTime > 0) {
+                    outputElem.innerHTML = currTime.toString();
+                } else {
+                    outputElem.innerHTML = "Blastoff!";
+                }
