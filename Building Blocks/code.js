@@ -35,7 +35,7 @@ function randomPi(n, outputElem){
     var outSets = 0;
 
     // Do the actual rolling and calculations for pi
-    function rollForPi(inSets, outSets, pi){
+    function rollForPi(){
         // Roll 2 dice
         var roll1 = Math.random();
         var roll2 = Math.random();
@@ -45,18 +45,16 @@ function randomPi(n, outputElem){
             // If so, add 1 to the number of sets inside the area
             inSets++;
             pi = 4 * inSets / (inSets + outSets);
-            return inSets, outSets, pi;
-        }
-
         // Otherwise add 1 to the number of sets outside the area
-        outSets++;
-        pi = 4 * inSets / (inSets + outSets);
-        return inSets, outSets, pi;
+        } else {
+            outSets++;
+            pi = 4 * inSets / (inSets + outSets);
+        }
     }
 
     // Adjust official variables and display the result for pi
     for (let i = 0; i < n; i++) {
-        setTimeout(function(){inSets, outSets, pi = rollForPi(inSets, outSets, pi); outputElem.innerHTML = pi.toString();}, i);
+        setTimeout(function(){rollForPi(inSets, outSets, pi); outputElem.innerHTML = pi.toString();}, i);
     }
 }
         
