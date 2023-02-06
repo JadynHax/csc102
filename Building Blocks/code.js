@@ -30,7 +30,7 @@ function displayTime(currTime, outputElem){
 
 // Calculate pi using random numbers
 function randomPi(n, outputElem){
-    var pi = 0;
+    var pi = 0.0;
     var inSets = 0;
     var outSets = 0;
 
