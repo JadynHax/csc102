@@ -29,7 +29,7 @@ function displayTime(currTime, outputElem){
 }
 
 // Calculate pi using random numbers
-function randomPi(n, outputElem){
+function randomPi(outputElem){
     var pi = 0.0;
     var inSets = 0;
     var outSets = 0;
@@ -53,11 +53,9 @@ function randomPi(n, outputElem){
     }
 
     // Adjust official variables and display the result for pi
-    for (let i = 0; i < n; i++) {
-        setTimeout(function(){rollForPi(inSets, outSets, pi); outputElem.innerHTML = pi.toString();}, i);
-    }
+    setInterval(function(){rollForPi(inSets, outSets, pi); outputElem.innerHTML = pi.toString();}, 1);
 }
-        
+
 
 // For later assignments
 function startButtonClick(){}
