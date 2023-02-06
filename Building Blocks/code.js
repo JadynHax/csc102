@@ -53,7 +53,7 @@ function randomPi(outputElem){
     }
 
     // Adjust official variables and display the result for pi
-    setInterval(function(){rollForPi(inSets, outSets, pi); outputElem.innerHTML = pi.toString();}, 1);
+    setInterval(function(){rollForPi(inSets, outSets, pi); outputElem.innerHTML = pi.toString();}, 0);
 }
 
 
