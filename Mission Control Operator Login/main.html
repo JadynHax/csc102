@@ -1,0 +1,29 @@
+<!-- Jadyn Rutz -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> UAT Mission Control Blast Off </title>
+        <script src="code.js"></script>
+    </head>
+    <body>
+        <img src="https://synchronic.uat.edu/courses/5439/files/767933/preview"/>
+        <br>
+        <label> First Name </label>
+        <input id="first-name-input" type="text" name="First Name" placeholder="First Name" onkeyup="validateName()"></input>
+        <br>
+        <label> Last Name </label>
+        <input id="last-name-input" type="text" name="Last Name" placeholder="Last Name" onkeyup="validateName()"></input>
+        <br>
+        <span id="name-valid-warning" style="color: red"></span>
+        <span id="name-display" style="font-weight: bold"></span>
+        <br>
+        <label> User Badge Number </label>
+        <input id="badge-number-input" type="text" name="User Badge Number" placeholder="123" onkeyup="validateBadgeNum()"></input>
+        <br>
+        <span id="badge-valid-warning" style="color: red"></span>
+        <span id="badge-display" style="font-weight: bold"></span>
+        <br>
+        <button onclick="runTimer(document.getElementById('timer-output'))"> Launch! </button>
+        <p id="timer-output"></p>
+    </body>
+</html>
