@@ -56,16 +56,13 @@ function validateBadgeNum() {
         return false;
     }
 
-    else {
-        for (let i = 0; i < badgeNumInput.value.length; i++) {
-            if (!('0' <= badgeNumInput.value[i] <= '9')) {
-                badgeValidWarning.innerHTML = "Warning: badge number must be only numbers!";
-                return false
-            }
-        }
-        badgeDisplay.innerHTML = badgeNumInput.value;
-        return true;
+    else if (/^\d+$/.test(badgeNumInput.value)) {
+        badgeValidWarning.innerHTML = "Warning: badge number must be only numbers!";
+        return false
     }
+
+    badgeDisplay.innerHTML = badgeNumInput.value;
+    return true;
 }
 
 // Display function for mission control timer
