@@ -57,12 +57,12 @@ function validateBadgeNum() {
     }
 
     else if (/^\d+$/.test(badgeNumInput.value)) {
-        badgeValidWarning.innerHTML = "Warning: badge number must be only numbers!";
-        return false
+        badgeDisplay.innerHTML = badgeNumInput.value;
+        return true;
     }
 
-    badgeDisplay.innerHTML = badgeNumInput.value;
-    return true;
+    badgeValidWarning.innerHTML = "Warning: badge number must be only numbers!";
+    return false
 }
 
 // Display function for mission control timer
